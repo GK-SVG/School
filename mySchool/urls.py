@@ -19,5 +19,7 @@ from .import views
 urlpatterns = [
     path('',views.home,name='Home'),
     path('about/',views.about,name='About'),
-    path('payment/',views.payment,name='Payment')
+    path('payment/',views.payment,name='Payment'),
+    path('processpayment/',views.processpayment,name='ProcessPayment'),
+    path("handlerequest/", views.handlerequest, name="HandleRequest"),
 ]

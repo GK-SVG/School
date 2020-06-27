@@ -14,17 +14,17 @@
 </head>
 <style>
     body {
-        background: rgb(32, 30, 30);
+       background: linear-gradient(#141e30, #243b55);
     }
     {% block css %}
 {% endblock css %}
 </style>
 
 <body>
-    <div>
+    {% comment %} <div>
         <img class="w-100" src="https://www.logolynx.com/images/logolynx/aa/aae5c17499cabb1b2bcd49b9ab9352db.jpeg"
             alt="" style="height: 200px;">
-    </div>
+    </div> {% endcomment %}
     <nav class="navbar navbar-expand-lg navbar-dark" style="background:black;">
         <a class="navbar-brand" href="/">mySCHOOL</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -63,14 +63,21 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: black;">
                         <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Results</a>
-                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Staff</a>
-                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Visits</a>
-                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Functions</a>
+                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Faculty</a>
+                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Gallery</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
+    {% for message in messages %}
+  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message: </strong> {{ message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor %}
     {% block body %}
     {% endblock body %}
     <footer style="background: black;">
@@ -127,6 +134,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
+    {% block js %}
+    {% endblock js %}
 </body>
 
 </html>
