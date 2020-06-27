@@ -16,9 +16,15 @@
     body {
         background: rgb(32, 30, 30);
     }
+    {% block css %}
+{% endblock css %}
 </style>
 
 <body>
+    <div>
+        <img class="w-100" src="https://www.logolynx.com/images/logolynx/aa/aae5c17499cabb1b2bcd49b9ab9352db.jpeg"
+            alt="" style="height: 200px;">
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background:black;">
         <a class="navbar-brand" href="/">mySCHOOL</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -34,7 +40,7 @@
                     <a class="nav-link" href="/about/">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pay-Fees</a>
+                    <a class="nav-link" href="/payment/" target="_blank">Pay-Fees</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Admission</a>
@@ -88,16 +94,17 @@
                     <a href="#"> <img src="https://gk-engineer.herokuapp.com/static/images/fb.png" alt=""
                             style="width: 3em; height: 3em;">
                     </a>
-                    <a href="#"> <img src="https://img.pngio.com/black-twitter-icon-transparent-background-195407-free-icons-library-twitter-logo-white-transparent-798_825.jpg" alt=""
-                        style="width: 3em; height: 3em;">
-                </a>
+                    <a href="#"> <img
+                            src="https://img.pngio.com/black-twitter-icon-transparent-background-195407-free-icons-library-twitter-logo-white-transparent-798_825.jpg"
+                            alt="" style="width: 3em; height: 3em;">
+                    </a>
                 </div>
             </div>
             <div class="row my-3" style="color: teal;">
-                  <div class="col-md-3" style="margin: 0 auto;border: 1px solid teal;">
-                      <b>Principal </b>PQR
-                  </div>
-                  <div class="col-md-3" style="margin: 0 auto;border: 1px solid teal;">
+                <div class="col-md-3" style="margin: 0 auto;border: 1px solid teal;">
+                    <b>Principal </b>PQR
+                </div>
+                <div class="col-md-3" style="margin: 0 auto;border: 1px solid teal;">
                     <b>Principal </b>ABC
                 </div>
                 <div class="col-md-4" style="margin: 0 auto;border: 1px solid teal;">
@@ -106,8 +113,9 @@
             </div>
             <div class="col-md-12 my-3">
                 <hr style=" background-color:white;width:auto;">
-               <p>All &copy; 2020 preserved by mySCHOOL and gk-web-developments</p>
-            <hr style=" background-color:white;width:auto;"></div>
+                <p>All &copy; 2020 preserved by mySCHOOL and gk-web-developments</p>
+                <hr style=" background-color:white;width:auto;">
+            </div>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

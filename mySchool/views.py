@@ -7,3 +7,6 @@ def home(request):
 
 def about(request):
     return render(request,'mySchool/about.html')
+
+def payment(request):
+    return render(request,'mySchool/payment.html')
