@@ -3,6 +3,7 @@ from .models import *
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 from Paytm import Checksum
+import datetime
 #last commit changed
 MERCHANT_KEY = 'MJs5tlGfwOMzMTQ@'
 # Create your views here.
@@ -24,6 +25,9 @@ def processpayment(request):
     father=request.GET['father']
     ammount=request.GET['ammount']
     student=Student.objects.get(rollNo=roll)
+    transaction_id=datetime.datetime.now().timestamp()
+    studentfee=StudentFees.objects.create(name=name,transaction_id=transaction_id,payment=ammount,roll=roll)
+    studentfee.save()
     print(student.Class)
     if not student.name==name:
         messages.error(request,'Student name does not match')
@@ -34,7 +38,7 @@ def processpayment(request):
     param_dict={
 			    
 				'MID': 'toaldV34834751882298',
-                'ORDER_ID': str(student.id),
+                'ORDER_ID': str(transaction_id),
                 'TXN_AMOUNT': str(ammount),
                 'CUST_ID': roll,
                 'INDUSTRY_TYPE_ID': 'Retail',
