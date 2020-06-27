@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="color:white;">
+        {{response}}
+        <div class=" col my-4">
+
+        <h2>Payment status regarding your order Id {{response.ORDERID}}</h2>
+        {% if response.RESPCODE == '01' %}
+        FEES SUCCESS
+        {% else %}
+        FEES FAILURE
+        {% endif%}
+    </div>
+    </div>
+</body>
+</html>
