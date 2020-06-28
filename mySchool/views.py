@@ -58,7 +58,6 @@ def handlerequest(request):
         response_dict[i] = form[i]
         if i == 'CHECKSUMHASH':
             checksum = form[i]
-
     verify = Checksum.verify_checksum(response_dict, MERCHANT_KEY, checksum)
     if verify:
         if response_dict['RESPCODE'] == '01':
