@@ -14,6 +14,10 @@ def home(request):
 def about(request):
     return render(request,'mySchool/about.html')
 
+def addmission(request):
+    return render(request,'mySchool/addmission.html')
+
+
 def payment(request):
     return render(request,'mySchool/payment.html')
 

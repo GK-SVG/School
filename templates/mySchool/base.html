@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href='https://css.gg/close.css' rel='stylesheet'>
     <!-- <link rel="stylesheet" href="{% static 'css/main.css'%}"> -->
     <link rel="stylesheet" href="{% static 'css/slider.css'%}">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -15,10 +16,16 @@
 </head>
 <style>
     body {
-       background: linear-gradient(#141e30, #243b55);
+        background: linear-gradient(#141e30, #243b55);
     }
-    {% block css %}
-{% endblock css %}
+
+        {
+        % block css %
+    }
+
+        {
+        % endblock css %
+    }
 </style>
 
 <body>
@@ -44,17 +51,17 @@
                     <a class="nav-link" href="/payment/" target="_blank">Pay-Fees</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Admission</a>
+                    <a class="nav-link" href="/addmission/">Admission</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Facility
+                        Gallery
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: black;">
-                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Transport</a>
-                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Computer-Lab</a>
-                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Sports</a>
+                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Video</a>
+                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Photo</a>
+
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -65,60 +72,73 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: black;">
                         <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Results</a>
                         <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Faculty</a>
-                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Gallery</a>
+                        <a class="dropdown-item" href="#" style="color:rgb(139, 126, 126);">Students</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
     {% for message in messages %}
-  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-    <strong>Message: </strong> {{ message}}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  {% endfor %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message: </strong> {{ message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
     {% block body %}
     {% endblock body %}
-    <footer style="background: black;">
-        <div class="container-fluid mt-4 text-center" style="color: white;">
+    <footer style="background: black; margin: 0;">
+        <div class="container-fluid mt-5 text-center" style="color: white;">
             <div class="row">
-                <div class="col-md-3" style="margin: 0 auto;">
+                <div class="col-md-3 mt-5" style="margin: 0 auto;">
                     <b style="font-size: 1.5rem;">Contact us</b>
                     <hr style="margin: auto; background-color: white;"><br>
                     <b>Mob.No. </b>9999888877<br>
-                    <b>Gmail </b>email.@gmail.com
-                </div>
-                <div class="col-md-3" style="margin: 0 auto;">
-                    <b style="font-size: 1.5rem;">Address</b>
+                    <b>Gmail </b>email.@gmail.com<br>
+                    <b class="mt-3" style="font-size: 1.5rem;">Address</b>
                     <hr style="margin: auto; background-color: white;"><br>
                     <b>ABCD public School</b><br>
                     xyz,sec-4,Alwar,Rajsthan
                 </div>
-                <div class="col-md-4" style="margin: 0 auto;">
+                <div class="col-md-3 mt-5" style="margin: 0 auto;">
+                    <b style="font-size: 1.5rem;">Persons</b>
+                    <hr style="margin: auto; background-color: white;"><br>
+                    <b>Principle</b>ABC
+                    <hr style="margin: auto; background-color: rgb(187, 174, 174);"><br>
+                    <b>Principle</b>ABC
+                    <hr style="margin: auto; background-color: rgb(187, 174, 174);"><br>
+                    <b>Principle</b>ABC
+                    <hr style="margin: auto; background-color: rgb(187, 174, 174);"><br>
+                </div>
+                <div class="col-md-4 mt-5" style="margin: 0 auto;">
                     <b style="font-size: 1.5rem;">Follow Us</b>
                     <hr style="margin: auto; background-color: white;"><br>
-                    <a href="#"> <img src="https://gk-engineer.herokuapp.com/static/images/fb.png" alt=""
-                            style="width: 3em; height: 3em;">
-                    </a>
-                    <a href="#"> <img
+                    <a href="#" style="text-decoration: none; color: white;margin: auto;"> <img
+                            src="https://gk-engineer.herokuapp.com/static/images/fb.png" alt=""
+                            style="width: 2.3em; height: 2.3em;">Facebook
+                    </a><br>
+                    <a href="#" style="text-decoration: none;color: white;margin: auto;"> <img
                             src="https://img.pngio.com/black-twitter-icon-transparent-background-195407-free-icons-library-twitter-logo-white-transparent-798_825.jpg"
-                            alt="" style="width: 3em; height: 3em;">
-                    </a>
+                            alt="" style="width: 3.1em; height: 3.1em;">Twitter
+                    </a><br>
+                    <a href="#" style="text-decoration: none;color: white;margin: auto;"> <img
+                            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8dea8d27-a9ef-4484-9c20-51f212ebe10f/dd65tbb-545c4f6d-1c6a-4b6f-a19e-499d41142d7d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOGRlYThkMjctYTllZi00NDg0LTljMjAtNTFmMjEyZWJlMTBmXC9kZDY1dGJiLTU0NWM0ZjZkLTFjNmEtNGI2Zi1hMTllLTQ5OWQ0MTE0MmQ3ZC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Rwb7BhYWftoeI3800_NsscB9NekzqWt7RrKZTyQPoIo"
+                            alt="" style="width: 3.1em; height: 3.1em;">Youtube
+                    </a><br>
                 </div>
             </div>
-            <div class="row my-3" style="color: teal;">
+            <!-- <div class="row my-3" style="color: teal;">
                 <div class="col-md-3" style="margin: 0 auto;border: 1px solid teal;">
-                    <b>Principal </b>PQR
+                    
                 </div>
                 <div class="col-md-3" style="margin: 0 auto;border: 1px solid teal;">
-                    <b>Principal </b>ABC
+                    
                 </div>
                 <div class="col-md-4" style="margin: 0 auto;border: 1px solid teal;">
                     <b>Owner </b>QWERT
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-12 my-3">
                 <hr style=" background-color:white;width:auto;">
                 <p>All &copy; 2020 preserved by mySCHOOL and gk-web-developments</p>
