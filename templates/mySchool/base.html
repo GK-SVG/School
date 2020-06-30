@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href='https://css.gg/close.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="{% static 'css/main.css'%}"> -->
     <link rel="stylesheet" href="{% static 'css/slider.css'%}">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -16,31 +17,58 @@
 </head>
 <style>
     body {
-        background: linear-gradient(#141e30, #243b55);
+        background: white;
+    }
+    .sh {
+    height:25rem;
+}
+    @media screen and (max-width: 720px) {
+        .m-display {
+            display: none;
+        }
+        .sh {
+    height:12rem;
+}
     }
 
-        {
-        % block css %
-    }
-
-        {
-        % endblock css %
-    }
+    {% block css %}
+    {% endblock css %}
+    
 </style>
 
 <body>
-    {% comment %} <div>
-        <img class="w-100" src="https://www.logolynx.com/images/logolynx/aa/aae5c17499cabb1b2bcd49b9ab9352db.jpeg"
-            alt="" style="height: 200px;">
-    </div> {% endcomment %}
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background:black;">
+    <div class="container-fluid m-display" style="margin: 0;  padding: 0;">
+        <div class="col-md-12" style="width: 100%;height: 17px; background-color: black;"></div>
+        <div class="col-md-8 text-center" style="background-color:black; float: right; color: white; height: 40px;">
+            <p class="mt-2" style="float: left; font-family: roboto;">ABCD sr. sec school,BHIWADI</p>
+            <a href="#"> <img class="ml-3" src="https://vettra.com/wp-content/uploads/2016/09/Google-Plus-icon.png" alt=""
+                style="width: 2.1em; height: 2.1em; text-decoration: none;">
+        </a>
+            <a href="#"> <img class="ml-3" src="https://gk-engineer.herokuapp.com/static/images/fb.png" alt=""
+                    style="width: 1.3em; height: 1.3em; text-decoration: none;">
+            </a>
+            <a href="#"> <img class="ml-3"
+                    src="https://img.pngio.com/black-twitter-icon-transparent-background-195407-free-icons-library-twitter-logo-white-transparent-798_825.jpg"
+                    alt="" style="width: 2.1em; height: 2.1em; text-decoration: none;">
+            </a>
+            <a href="#"> <img class="ml-3"
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8dea8d27-a9ef-4484-9c20-51f212ebe10f/dd65tbb-545c4f6d-1c6a-4b6f-a19e-499d41142d7d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOGRlYThkMjctYTllZi00NDg0LTljMjAtNTFmMjEyZWJlMTBmXC9kZDY1dGJiLTU0NWM0ZjZkLTFjNmEtNGI2Zi1hMTllLTQ5OWQ0MTE0MmQ3ZC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Rwb7BhYWftoeI3800_NsscB9NekzqWt7RrKZTyQPoIo"
+                    alt="" style="width: 2.1em; height: 2.1em; text-decoration: none;">
+            </a>
+        </div><br>
+            <div class="col-md-6">
+                <img src="https://us.123rf.com/450wm/alluranet/alluranet1712/alluranet171200004/91011424-stock-vector-education-sharing-logo-design-template-vector-.jpg?ver=6"
+                    alt="" style="width: 8rem;height: 6rem;">
+            </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background:black;">
         <a class="navbar-brand" href="/">mySCHOOL</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -102,13 +130,13 @@
                     xyz,sec-4,Alwar,Rajsthan
                 </div>
                 <div class="col-md-3 mt-5" style="margin: 0 auto;">
-                    <b style="font-size: 1.5rem;">Persons</b>
+                    <b style="font-size: 1.5rem;">QuickLinks</b>
                     <hr style="margin: auto; background-color: white;"><br>
                     <b>Principle</b>ABC
                     <hr style="margin: auto; background-color: rgb(187, 174, 174);"><br>
-                    <b>Principle</b>ABC
+                    <b>HeadMaster</b>ABC
                     <hr style="margin: auto; background-color: rgb(187, 174, 174);"><br>
-                    <b>Principle</b>ABC
+                    <b>Owner</b>ABC
                     <hr style="margin: auto; background-color: rgb(187, 174, 174);"><br>
                 </div>
                 <div class="col-md-4 mt-5" style="margin: 0 auto;">
@@ -128,20 +156,9 @@
                     </a><br>
                 </div>
             </div>
-            <!-- <div class="row my-3" style="color: teal;">
-                <div class="col-md-3" style="margin: 0 auto;border: 1px solid teal;">
-                    
-                </div>
-                <div class="col-md-3" style="margin: 0 auto;border: 1px solid teal;">
-                    
-                </div>
-                <div class="col-md-4" style="margin: 0 auto;border: 1px solid teal;">
-                    <b>Owner </b>QWERT
-                </div>
-            </div> -->
             <div class="col-md-12 my-3">
                 <hr style=" background-color:white;width:auto;">
-                <p>All &copy; 2020 preserved by mySCHOOL and gk-web-developments</p>
+                <p>All &copy; 2020 preserved by mySCHOOL and gk-web-developer</p>
                 <hr style=" background-color:white;width:auto;">
             </div>
         </div>
